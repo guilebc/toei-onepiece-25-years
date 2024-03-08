@@ -31,4 +31,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'azure' => [
+        'contentsafety' => [
+            'key' => env('AZURE_CONTENT_SAFETY_KEY'),
+            // https://westus.dev.cognitive.microsoft.com/docs/services/content-safety-service-2023-10-01/operations/ImageOperations_AnalyzeImage/console
+            'endpoint' => env('AZURE_CONTENT_SAFETY_ENDPOINT'),
+        ]
+    ]
 ];
