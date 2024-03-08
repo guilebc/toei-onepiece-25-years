@@ -5,6 +5,19 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'translates' => [
+        'spreadsheets' => [
+            'id' => env('TRANSLATE_GOOGLE_SPREADSHEETS_ID'),
+            'gids' => [
+                'en' => env('TRANSLATE_GOOGLE_SPREADSHEETS_EN_TAB_ID'),
+                'fr' => env('TRANSLATE_GOOGLE_SPREADSHEETS_FR_TAB_ID'),
+                'es' => env('TRANSLATE_GOOGLE_SPREADSHEETS_ES_TAB_ID'),
+                'de' => env('TRANSLATE_GOOGLE_SPREADSHEETS_DE_TAB_ID'),
+                'it' => env('TRANSLATE_GOOGLE_SPREADSHEETS_IT_TAB_ID'),
+            ]
+        ]
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -70,7 +83,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Paris',
 
     /*
     |--------------------------------------------------------------------------
