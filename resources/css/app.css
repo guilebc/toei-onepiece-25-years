@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Port Lligat Slab';
+    src: url('../fonts/portlligatslab-regular-webfont.woff2') format('woff2'),
+    url('../fonts/portlligatslab-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
