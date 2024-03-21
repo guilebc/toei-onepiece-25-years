@@ -1,5 +1,6 @@
 <?php
 
+use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -22,5 +23,9 @@ Route::group([
         'localeViewPath'
     ]
 ], function() {
+    Livewire::setUpdateRoute(function ($handle) {
+        return Route::post('/livewire/update', $handle);
+    });
+
     Route::get('/', IndexController::class);
 });
