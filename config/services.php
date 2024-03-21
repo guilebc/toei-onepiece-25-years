@@ -37,5 +37,16 @@ return [
             // https://westus.dev.cognitive.microsoft.com/docs/services/content-safety-service-2023-10-01/operations/ImageOperations_AnalyzeImage/console
             'endpoint' => env('AZURE_CONTENT_SAFETY_ENDPOINT'),
         ]
+    ],
+
+    'smartproxy' => [
+        'socialmedia' => [
+            'token' => env('SMARTPROXY_SOCIAL_MEDIA_TOKEN')
+        ]
+    ],
+
+    'flockler' => [
+        'endpoint' => env('FLOCKLER_ENDPOINT'),
+        'api_key' => env('FLOCKLER_API_KEY'),
     ]
 ];
