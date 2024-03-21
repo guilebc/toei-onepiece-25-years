@@ -4,6 +4,8 @@
 
     <x-langue-selector/>
 
+    <livewire:create-post/>
+
     <div class="grid grid-cols-2 lg:grid-cols-4">
     @foreach($posts as $post)
         <div class="aspect-square">

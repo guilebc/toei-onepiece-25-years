@@ -48,5 +48,10 @@ return [
     'flockler' => [
         'endpoint' => env('FLOCKLER_ENDPOINT'),
         'api_key' => env('FLOCKLER_API_KEY'),
-    ]
+    ],
+
+    'turnstile' => [
+        'key' => env('TURNSTILE_SITE_KEY'),
+        'secret' => env('TURNSTILE_SECRET_KEY'),
+    ],
 ];
