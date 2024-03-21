@@ -13,21 +13,21 @@ use App\Services\Smartproxy\SocialMedia\InstagramInterface;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 
-class Test extends Command
+class InstagramContent extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:test';
+    protected $signature = 'app:instagram-content';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Test command.';
+    protected $description = 'Save instagram posts from Flockler API.';
 
     /**
      * Execute the console command.
