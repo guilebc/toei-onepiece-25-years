@@ -13,3 +13,25 @@
 [x-cloak] {
     display: none !important;
 }
+
+.btn-primary {
+    @apply font-bold text-white uppercase bg-primary rounded-full;
+}
+
+/**
+ ** Stream pagination
+ */
+.stream__pagination {
+    @apply w-full grid grid-cols-5 relative z-10;
+    /* Text */
+    @apply font-display text-xl text-white text-center;
+    /* Bar */
+    @apply after:absolute after:border-2 after:border-black lg:after:border-white after:w-4/5 after:mx-auto after:left-0 after:right-0 after:top-2 after:-z-10;
+}
+.stream__cursor {
+    @apply absolute bottom-6;
+    @apply pointer-events-none transition-transform;
+}
+.stream__city {
+    @apply rounded-full border-2 border-black lg:border-white w-5 h-5 mx-auto;
+}
