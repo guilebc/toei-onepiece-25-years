@@ -23,6 +23,7 @@ class Post extends Model
         'flockler_id',
         'image_url',
         'attachment',
+        'active',
         'published_at'
     ];
 
@@ -36,11 +37,23 @@ class Post extends Model
     protected $casts = [
         'type' => PostType::class,
         'city' => PostCity::class,
+        'active' => 'boolean',
         'published_at' => 'datetime'
     ];
 
-    public function scopeLast(Builder $query): void
+    /**
+     * @param Builder $query
+     * @return void
+     */
+    public function scopeActive(Builder $query): void
     {
-        $query->orderBy('published_at', 'desc');
+        $query->where('active', true);
+    }
+
+    public function scopeCity(Builder $query, string $city): void
+    {
+        if(PostCity::tryFrom($city)) {
+            $query->where('city', $city);
+        }
     }
 }
