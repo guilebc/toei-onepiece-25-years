@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('city', 8)->index();
+            $table->string('city', 8)->index()->nullable();
             $table->string('type', 16)->index();
             $table->unsignedBigInteger('flockler_id')->nullable()->index();
             $table->string('image_url')->nullable();
             $table->string('attachment')->nullable();
+            $table->boolean('active')->default(1);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
