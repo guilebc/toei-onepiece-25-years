@@ -34,7 +34,7 @@ class InstagramContent extends Command
      */
     public function handle(ContentSafetyInterface $contentSafety, ContentInterface $content)
     {
-        $last = Post::last()->first();
+        $last = Post::latest('published_at')->first();
 
         $content->posts()
             ->where('flocklerId', '>', optional($last)->flockler_id ?? 0)
@@ -45,9 +45,10 @@ class InstagramContent extends Command
 
                 Post::create([
                     'type' => PostType::INSTAGRAM,
-                    'city' => $tags->first(fn($tag) => PostCity::tryFrom($tag)) ?? PostCity::ALL,
+                    'city' => $tags->first(fn($tag) => PostCity::tryFrom($tag)) ?? null,
                     'flockler_id' => $post['flocklerId'],
                     'image_url' => $images->first()['url'],
+                    'active' => true,
                     'published_at' => $post['publishedAt'],
                 ]);
 
