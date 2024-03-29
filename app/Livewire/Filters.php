@@ -2,7 +2,6 @@
 
 namespace App\Livewire;
 
-use App\Enums\PostCity;
 use Livewire\Component;
 
 class Filters extends Component
