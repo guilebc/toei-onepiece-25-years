@@ -3,8 +3,8 @@
 <head>
     @include('layouts.head')
 </head>
-<body>
+<body class="font-body">
     @yield('content')
-    @livewireScripts
+    @livewireScriptConfig
 </body>
 </html>
