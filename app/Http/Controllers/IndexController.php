@@ -9,8 +9,6 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $posts = Post::last()->get();
-
-        return view('index', compact('posts'));
+        return view('index');
     }
 }
