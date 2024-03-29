@@ -12,5 +12,14 @@
         "postcss": "^8.4.35",
         "tailwindcss": "^3.4.1",
         "vite": "^5.0.0"
+    },
+    "overrides": {
+        "vite": {
+            "rollup": "npm:@rollup/wasm-node"
+        }
+    },
+    "dependencies": {
+        "@fancyapps/ui": "^5.0.35",
+        "swiper": "^11.1.0"
     }
 }
