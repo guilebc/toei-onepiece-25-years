@@ -27,5 +27,5 @@ Route::group([
         return Route::post('/livewire/update', $handle);
     });
 
-    Route::get('/', IndexController::class);
+    Route::get('/', IndexController::class)->name('index');
 });
