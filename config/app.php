@@ -5,6 +5,9 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'trailer_url' => env('TRAILER_URL'),
+    'countdown_until' => env('COUNTDOWN_UNTIL'),
+
     'translates' => [
         'spreadsheets' => [
             'id' => env('TRANSLATE_GOOGLE_SPREADSHEETS_ID'),
