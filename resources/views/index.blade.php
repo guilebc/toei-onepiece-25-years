@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section>
+    <section class="relative z-20">
         <x-navbar/>
     </section>
 
