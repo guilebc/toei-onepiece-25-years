@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="relative z-20">
-        <x-navbar/>
+        <x-navbar theme="black"/>
     </section>
 
     <div class="hero-section">
