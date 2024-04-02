@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         @foreach($posts as $post)
             <div class="aspect-square" wire:key="{{ $post->id }}">
-                <img class="w-full h-full object-cover" src="{{ $post->image_url }}" alt="">
+                <img class="w-full h-full object-cover" src="{{ $post->attachment_url }}" alt="">
             </div>
         @endforeach
     </div>
