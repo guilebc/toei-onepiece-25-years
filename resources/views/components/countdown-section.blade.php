@@ -4,7 +4,7 @@
             <h1 class="font-display text-5xl uppercase">{{ trans('app.luffyBirthdayComingUp') }}</h1>
             <p class="font-display text-2xl uppercase">{{ trans('app.beReady') }}</p>
         </div>
-        <div x-data="countdown" class="font-display uppercase w-10/12 lg:w-4/12 flex justify-center text-center gap-3 mx-auto">
+        <div x-data="countdown({until: '{{ config('app.countdown_until') }}'})" class="font-display uppercase w-10/12 lg:w-4/12 flex justify-center text-center gap-3 mx-auto">
             <x-countdown-digit digit="days">{{ trans('app.days') }}</x-countdown-digit>
             <x-countdown-digit digit="hours">{{ trans('app.hours') }}</x-countdown-digit>
             <x-countdown-digit digit="minutes">{{ trans('app.minutes') }}</x-countdown-digit>
