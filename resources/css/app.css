@@ -35,3 +35,7 @@
 .stream__city {
     @apply rounded-full border-2 border-black lg:border-white w-5 h-5 mx-auto;
 }
+
+.cf-turnstile {
+    @apply inline-block;
+}

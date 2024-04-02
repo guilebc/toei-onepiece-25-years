@@ -2,8 +2,19 @@
 
 namespace App\Livewire;
 
+use App\Enums\PostCity;
+use App\Enums\PostType;
+use App\Models\Post;
+use App\Rules\ImageContentSafety;
+use App\Rules\ImageTemporaryFile;
+use Carbon\Carbon;
 use Illuminate\Validation\Rule;
+use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\Exceptions\DecoderException;
+use Intervention\Image\ImageManager;
+use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Livewire\WithFileUploads;
 
 class CreatePost extends Component
@@ -14,18 +25,73 @@ class CreatePost extends Component
 
     public $image;
 
-    public function rules()
+    public $turnstile;
+
+    public $successed = false;
+
+    public function rules(): array
     {
         return [
             'city' => ['required'],
-            'image' => ['required', 'mimes:jpg,png'],
-            'cf-turnstile-response' => ['required', Rule::turnstile()],
+            'image' => ['required', 'mimes:jpg,png', new ImageTemporaryFile()/*, new ImageContentSafety()*/],
+            'turnstile' => ['required', Rule::turnstile()],
         ];
     }
 
-    public function save()
+    /**
+     * @param $name
+     * @param $tmpFilenames
+     * @return void
+     */
+    #[On('upload:finished')]
+    public function uploadFinished($name, $tmpFilenames): void
     {
-        dd($this->all());
+        $file = TemporaryUploadedFile::createFromLivewire($tmpFilenames[0]);
+
+        $manager = new ImageManager(new Driver());
+
+        try {
+            $image = $manager->read($file->getRealPath());
+
+            $image->scaleDown(width: 600);
+            $image->toJpeg(75)
+                ->save($file->getRealPath());
+        } catch (DecoderException $decoderException) {
+            //
+        }
+    }
+
+    public function save(): void
+    {
+        $this->dispatch('post-submitted');
+
+        $this->validate();
+
+        $image = $this->image->store(path: 'images');
+
+        Post::create([
+            'city' => PostCity::from($this->city),
+            'type' => PostType::from('app'),
+            'image_url' => $image,
+            'active' => true,
+            'published_at' => Carbon::now()
+        ]);
+
+        $this->successed = true;
+
+        //$this->reset();
+    }
+
+    public function anotherPhoto()
+    {
+        $this->reset();
+
+        $this->successed = false;
+    }
+
+    public function rerenderTurnstile()
+    {
+        $this->dispatch('turnstile-rerender');
     }
 
     public function render()
