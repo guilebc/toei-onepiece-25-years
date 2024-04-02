@@ -34,4 +34,8 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    @production
+        <x-axeptio/>
+    @endproduction
+
     @turnstileScripts()
