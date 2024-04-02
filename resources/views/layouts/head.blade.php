@@ -36,6 +36,7 @@
 
     @production
         <x-axeptio/>
+        <x-analytics/>
     @endproduction
 
     @turnstileScripts()
