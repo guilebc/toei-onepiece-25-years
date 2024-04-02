@@ -1,4 +1,6 @@
-export default () => ({
+import dayjs from "dayjs";
+
+export default ({until}) => ({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -7,8 +9,7 @@ export default () => ({
     interval: null,
 
     init() {
-        this.endTime = new Date(2024, 5, 31, 23, 59, 59)
-            .getTime();
+        this.endTime = dayjs(until).unix();
 
         this.update();
 
@@ -16,13 +17,13 @@ export default () => ({
     },
 
     update() {
-        const now = new Date().getTime();
+        const now = dayjs().unix();
         const distance = this.endTime - now;
 
-        this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        this.days = Math.floor(distance / (60 * 60 * 24));
+        this.hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+        this.minutes = Math.floor((distance % (60 * 60)) / 60);
+        this.seconds = Math.floor(distance % 60);
 
         if(distance <= 0) {
             window.clearInterval(this.interval);
