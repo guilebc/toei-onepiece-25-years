@@ -33,7 +33,7 @@ class CreatePost extends Component
     {
         return [
             'city' => ['required'],
-            'image' => ['required', 'mimes:jpg,png', new ImageTemporaryFile()/*, new ImageContentSafety()*/],
+            'image' => ['required', 'mimes:jpg,png', new ImageTemporaryFile(), new ImageContentSafety()],
             'turnstile' => ['required', Rule::turnstile()],
         ];
     }
