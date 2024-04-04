@@ -1,12 +1,12 @@
-<section class="stream-section">
+<section x-data="playlist" @add="add" @play-video="play" class="stream-section">
     <div x-data="carousel" class="relative">
         <div x-ref="swiper" class="swiper">
             <div class="swiper-wrapper">
-                @foreach($streams as $stream)
+                @foreach($streams as $index => $stream)
                     <div class="swiper-slide">
-                        <video class="w-full aspect-video" src="{{ $stream['stream_url'] }}" autoplay loop playsinline muted preload="metadata" controlslist="nodownload">
-                            <source src="{{ $stream['stream_url'] }}" type="video/mp4">
-                        </video>
+                        <div class="w-full aspect-video" x-data="video({id: '{{ $stream['youtube_id'] }}'})">
+                            <div x-ref="player"></div>
+                        </div>
                     </div>
                 @endforeach
             </div>

@@ -28,6 +28,8 @@ export default () => ({
         this.swiper.slideTo(index);
         this.currentIndex = index;
 
+        this.$dispatch('play-video', {index});
+
         this.update();
     }
 });

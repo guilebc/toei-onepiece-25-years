@@ -5,6 +5,7 @@
     </head>
     <body class="font-body" :class="open ? 'overflow-hidden' : ''">
         @yield('content')
+
         @livewireScriptConfig
     </body>
 </html>
