@@ -5,7 +5,7 @@
             <p class="font-display text-3xl uppercase">{!! nl2br(preg_replace('/#(\w+)/', '<span class="text-primary">$0</span>', trans('app.shareYouPictureText'))) !!}</p>
         </div>
         <div class="px-3 lg:px-0">
-            <livewire:filters/>
+            <livewire:filters section="posts"/>
             <livewire:posts/>
         </div>
     </div>
