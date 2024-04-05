@@ -14,7 +14,8 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
         "mcamara/laravel-localization": "^2.0",
-        "ryangjchandler/laravel-cloudflare-turnstile": "^1.1"
+        "ryangjchandler/laravel-cloudflare-turnstile": "^1.1",
+        "symfony/finder": "^7.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.12",
@@ -37,7 +38,10 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [
