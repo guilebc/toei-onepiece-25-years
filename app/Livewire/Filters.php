@@ -6,19 +6,25 @@ use Livewire\Component;
 
 class Filters extends Component
 {
-    public $city = 'all';
+    public $section = '';
+
+    public $posts = 'all';
+    public $gallery = 'all';
 
     protected function queryString(): array
     {
         return [
-            'city',
+            'posts',
+            'gallery'
         ];
     }
 
     public function render()
     {
-        $this->dispatch('update-posts', city: $this->city)
-            ->to(Posts::class);
+        switch ($this->section) {
+            case 'posts': $this->dispatch('update-posts', $this->{$this->section})->to(Posts::class); break;
+            case 'gallery': $this->dispatch('update-gallery', $this->{$this->section})->to(Gallery::class); break;
+        }
 
         return view('livewire.filters');
     }
