@@ -1,15 +1,10 @@
 {
-    "name": "One Piece 25 ans",
-    "short_name": "One Piece 25 ans",
+    "name": "One Piece",
+    "short_name": "One Piece",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
+            "src": "/android-chrome-144x144.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ],
