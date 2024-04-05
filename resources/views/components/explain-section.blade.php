@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto">
         <div class="lg:flex lg:justify-center lg:items-center lg:gap-32">
             <div class="lg:w-4/12">
-                <div><img class="mx-auto" src="https://placehold.co/490x695.jpg" alt=""></div>
+                <div><img class="mx-auto" src="{{ asset('assets/explain.jpg') }}" alt=""></div>
             </div>
             <div class="lg:w-5/12">
                 <div class="p-6">
