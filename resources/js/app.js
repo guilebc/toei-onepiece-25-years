@@ -3,9 +3,11 @@ import './promise.js';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import 'aos/dist/aos.css';
 
 import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import {Fancybox} from "@fancyapps/ui";
+import AOS from 'aos';
 
 import video from "./video.js";
 import playlist from "./playlist.js";
@@ -30,4 +32,7 @@ Alpine.data('carousel', carousel);
 Alpine.data('captcha', captcha);
 
 Fancybox.bind('[data-fancybox]');
+AOS.init();
+
+
 Livewire.start();
