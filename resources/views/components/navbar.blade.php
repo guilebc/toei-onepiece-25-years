@@ -3,7 +3,7 @@
     <div class="flex justify-center sm:justify-between items-center ">
         <div class="w-3/12 sm:w-2/12"><img class="w-[165px]" src="{{ asset('assets/logo.png') }}" alt=""></div>
         <div class="w-5/12 sm:w-8/12">
-            <a href="{{ route('index') }}"><img class="mx-auto" src="https://placehold.co/355x125.jpg" alt=""></a>
+            <a href="{{ route('index') }}"><img class="mx-auto" src="{{ asset('assets/logo-onepiece.png') }}" alt=""></a>
         </div>
         <div class="w-3/12 sm:w-2/12">
             <div class="text-right pr-0 sm:pr-3">
