@@ -6,7 +6,9 @@ use Illuminate\Support\ServiceProvider;
 return [
 
     'trailer_url' => env('TRAILER_URL'),
-    'countdown_until' => env('COUNTDOWN_UNTIL'),
+    'countdown_ends_at' => env('COUNTDOWN_ENDS_AT'),
+    'gallery_ends_at' => env('GALLERY_ENDS_AT'),
+    'event_ends_at' => env('EVENT_ENDS_AT'),
 
     'translates' => [
         'spreadsheets' => [
