@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^5.0.35",
+        "aos": "^2.3.4",
         "dayjs": "^1.11.10",
         "swiper": "^11.1.0"
     }
