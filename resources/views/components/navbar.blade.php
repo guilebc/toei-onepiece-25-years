@@ -1,14 +1,9 @@
 @props(['theme'])
-<div {{ $attributes->merge(['class' => 'max-w-7xl mx-auto']) }}>
-    <div class="flex justify-center sm:justify-between items-center ">
-        <div class="w-3/12 sm:w-2/12"><img class="w-[165px]" src="{{ asset('assets/logo.png') }}" alt=""></div>
-        <div class="w-5/12 sm:w-8/12">
-            <a href="{{ route('index') }}"><img class="mx-auto" src="{{ asset('assets/logo-onepiece.png') }}" alt=""></a>
-        </div>
-        <div class="w-3/12 sm:w-2/12">
-            <div class="text-right pr-0 sm:pr-3">
-                <x-langue-selector/>
-            </div>
+<div class="relative z-50">
+    <div {{ $attributes->merge(['class' => 'flex justify-between items-center max-w-7xl mx-auto px-3 py-3']) }}>
+        <div><img class="max-w-[150px] lg:max-w-[190px]" src="{{ asset('assets/logo-onepiece.png') }}" alt="One Piece"></div>
+        <div>
+            <x-langue-selector/>
         </div>
     </div>
 </div>
