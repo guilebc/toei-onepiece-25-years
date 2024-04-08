@@ -25,25 +25,26 @@
         <x-posts-section/>
     @endif--}}
 
+    <x-navbar theme="black"/>
+
     <div class="relative">
-        <x-navbar class="absolute w-full inset-x-0 z-10"/>
         <x-hero-section/>
     </div>
 
     <div class="relative">
-        <x-navbar class="relative lg:absolute lg:w-full lg:inset-x-0 z-10"/>
         <x-stream-section/>
     </div>
 
     <x-gallery-section/>
     <x-bestof-section/>
     <x-countdown-section/>
+    <x-trailer-section/>
     <x-posts-section/>
     <x-explain-section/>
     <x-partner-section/>
     <x-footer/>
 
-    @if(steps('event'))
+    {{--@if(steps('event'))--}}
         <x-modal>
             <livewire:create-post/>
         </x-modal>
@@ -55,6 +56,6 @@
                 </svg>
             </button>
         </div>
-    @endif
+    {{--@endif--}}
 
 @endsection
