@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="lg:w-1/2">
-            <div class="aspect-square"><img class="object-cover w-full h-full" src="{{ asset('assets/hero.jpg') }}" alt="TV Animation One Piece 25th"></div>
+            <div><img src="{{ asset('assets/hero.jpg') }}" alt="TV Animation One Piece 25th"></div>
         </div>
     </div>
 </section>
