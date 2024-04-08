@@ -2,36 +2,16 @@
 
 @section('content')
 
-    {{--@if(steps('countdown') || steps('end'))
-        <div class="relative">
-            <x-navbar class="absolute w-full inset-x-0 z-10"/>
-            <x-hero-section/>
-        </div>
-        @if(steps('end'))
-            <x-gallery-section/>
-            <x-bestof-section/>
-            <x-posts-section/>
-        @endif
-    @elseif(steps('event'))
-        <div class="relative">
-            <x-navbar class="relative lg:absolute lg:w-full lg:inset-x-0 z-10"/>
-            <x-stream-section/>
-        </div>
-    @endif
-
-    @if(steps('countdown'))
-        <x-countdown-section/>
-    @elseif(steps('event'))
-        <x-posts-section/>
-    @endif--}}
-
     <x-navbar theme="black"/>
 
-    <div class="relative">
-        <x-hero-section/>
-    </div>
+    <x-hero-section/>
 
     <div class="relative">
+        <div class="absolute top-12 inset-x-0 z-10">
+            <div class="max-w-7xl mx-auto">
+                <div><img class="max-w-[150px]" src="{{ asset('assets/logo.png') }}" alt="TV Animation One Piece 25th"></div>
+            </div>
+        </div>
         <x-stream-section/>
     </div>
 
