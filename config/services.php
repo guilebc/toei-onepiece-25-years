@@ -48,6 +48,7 @@ return [
     'flockler' => [
         'endpoint' => env('FLOCKLER_ENDPOINT'),
         'api_key' => env('FLOCKLER_API_KEY'),
+        'filter_section_id' => env('FLOCKLER_FILTER_SECTION_ID'),
     ],
 
     'turnstile' => [

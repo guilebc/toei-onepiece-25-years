@@ -36,7 +36,14 @@ class InstagramContent extends Command
     {
         $last = Post::latest('published_at')->first();
 
-        $content->posts()
+        $params = [];
+
+        $sectionId =  config('services.flockler.filter_section_id');
+        if($sectionId) {
+            $params['filterBySectionIds[]'] = config('services.flockler.filter_section_id');
+        }
+
+        $content->posts($params)
             ->where('flocklerId', '>', optional($last)->flockler_id ?? 0)
             ->each(function($post) {
 
