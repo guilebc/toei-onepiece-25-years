@@ -53,7 +53,9 @@ class CreatePost extends Component
         try {
             $image = $manager->read($file->getRealPath());
 
-            $image->scaleDown(width: 600);
+            $image->scaleDown(width: 600, height: 600)
+                ->cover(600, 600);
+
             $image->toJpeg(75)
                 ->save($file->getRealPath());
         } catch (DecoderException $decoderException) {

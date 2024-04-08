@@ -11,11 +11,11 @@
     @else
         <form x-data="captcha" wire:submit="save">
             <div class="mb-6">
-                @if ($image)
-                    <div class="mb-3">
+                <div class="aspect-square w-full max-w-[280px] mx-auto mb-3 bg-neutral-500">
+                    @if($image)
                         <img class="mx-auto" src="{{ $image->temporaryUrl() }}" alt="Preview"/>
-                    </div>
-                @endif
+                    @endif
+                </div>
 
                 <div class="text-center">
                     <input wire:model="image" id="create-image" class="hidden peer" type="file" accept="image/jpeg,image/png" capture="user">
