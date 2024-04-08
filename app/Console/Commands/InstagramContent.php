@@ -40,7 +40,7 @@ class InstagramContent extends Command
 
         $sectionId =  config('services.flockler.filter_section_id');
         if($sectionId) {
-            $params['filterBySectionIds[]'] = config('services.flockler.filter_section_id');
+            $params['filterBySectionIds[]'] = $sectionId;
         }
 
         $content->posts($params)
