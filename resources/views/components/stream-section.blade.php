@@ -1,4 +1,4 @@
-<section x-data="playlist" @add="add" @play-video="play" class="stream-section">
+<section x-data="playlist" @add="add" @play-video="play" class="stream-section relative z-0">
     <div x-data="carousel" class="relative">
         <div x-ref="swiper" class="swiper">
             <div class="swiper-wrapper">
@@ -14,7 +14,7 @@
 
         <div class="overflow-hidden lg:overflow-visible lg:absolute lg:left-12 lg:bottom-12 lg:w-2/4 pt-[165px] lg:pt-0">
             <div x-ref="pagination" @resize.window="update" class="stream__pagination">
-                <img x-ref="cursor" class="stream__cursor" src="https://placehold.co/120x160.png" alt="">
+                <img x-ref="cursor" class="stream__cursor" src="{{ asset('assets/cursor.png') }}" alt="">
                 @foreach($streams as $index => $stream)
                     <div @click="slideTo({{ $index }})" class="cursor-pointer">
                         <div class="stream__city bg-{{ $stream['color'] }}"></div>
