@@ -49,6 +49,8 @@ export default {
             colors: {
                 'primary': '#FDA42E',
 
+                'prussian-blue': '#002755',
+
                 'all': '#000000',
                 'milan': '#4D9CF3',
                 'berlin': '#D22720',
