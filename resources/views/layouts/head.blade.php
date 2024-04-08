@@ -3,20 +3,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ trans('app.metaTitle') }}</title>
 
-    <meta name="description" content="@yield('meta.description', trim(preg_replace('/\s\s+/', ' ', trans('app.introduction2'))))" />
+    <meta name="description" content="{{ trans('app.luffyCelebrationText1') }}" />
     <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:title" content="{{ trans('app.metaTitle') }}" />
+    <meta property="og:description" content="{{ trans('app.luffyCelebrationText1') }}" />
+    <meta property="og:url" content="{{ config('app.url') }}" />
+    <meta property="og:site_name" content="{{ trans('app.metaTitle') }}" />
+    <meta property="og:image" content="{{ asset('assets/og.jpg') }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="{{ config('app.name') }}" />
+    <meta property="og:site_name" content="{{ trans('app.metaTitle') }}" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
