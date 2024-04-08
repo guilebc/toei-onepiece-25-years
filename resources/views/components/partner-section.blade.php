@@ -1,7 +1,7 @@
 <section class="partner-section">
-    <div class="max-w-7xl mx-auto py-12">
-        <ul class="flex flex-wrap lg:flex-nowrap justify-center gap-3 text-center">
-            <li><a target="_blank" href="https://ultrapop.co/"><img src="{{ asset('assets/partners/ultrapop.jpg') }}" alt="Ultrapop"></a></li>
+    <div class="max-w-7xl mx-auto px-3 lg:px-0 py-12">
+        <ul class="grid grid-cols-2 lg:flex lg:flex-nowrap justify-center gap-3 text-center">
+            <li><a target="_blank" href="https://ultraicetea.com/en/home/"><img src="{{ asset('assets/partners/ultrapop.jpg') }}" alt="Ultrapop"></a></li>
             <li><a target="_blank" href="https://www.crunchyroll.com/"><img src="{{ asset('assets/partners/crunchyroll.jpg') }}" alt="Crunchyroll"></a></li>
             <li><a target="_blank" href="https://www.abystyle-studio.com/"><img src="{{ asset('assets/partners/abystyle.jpg') }}" alt="ABYstyle"></a></li>
             <li><a target="_blank" href="https://fr.bandainamcoent.eu/"><img src="{{ asset('assets/partners/bandai.jpg') }}" alt="Bandai Namco"></a></li>
