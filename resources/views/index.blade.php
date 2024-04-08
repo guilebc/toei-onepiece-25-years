@@ -7,9 +7,9 @@
     <x-hero-section/>
 
     <div class="relative">
-        <div class="absolute top-12 inset-x-0 z-10">
+        <div class="absolute top-3 lg:top-12 inset-x-0 z-10 pointer-events-none">
             <div class="max-w-7xl mx-auto">
-                <div><img class="max-w-[150px]" src="{{ asset('assets/logo.png') }}" alt="TV Animation One Piece 25th"></div>
+                <div class="pl-3 lg:pl-0"><img class="max-w-[75px] lg:max-w-[150px]" src="{{ asset('assets/logo.png') }}" alt="TV Animation One Piece 25th"></div>
             </div>
         </div>
         <x-stream-section/>
