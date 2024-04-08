@@ -11,6 +11,7 @@ import AOS from 'aos';
 
 import video from "./video.js";
 import playlist from "./playlist.js";
+import player from "./player.js";
 import countdown from "./countdown.js";
 import carousel from "./carousel.js";
 import captcha from "./captcha.js";
@@ -26,6 +27,7 @@ dayjs.tz.setDefault('Europe/Paris');
 
 Alpine.data('video', video);
 Alpine.data('playlist', playlist);
+Alpine.data('player', player);
 
 Alpine.data('countdown', countdown);
 Alpine.data('carousel', carousel);
