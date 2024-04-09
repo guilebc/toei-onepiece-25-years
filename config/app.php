@@ -7,8 +7,8 @@ return [
 
     'trailer_url' => env('TRAILER_URL'),
     'countdown_ends_at' => env('COUNTDOWN_ENDS_AT'),
-    'gallery_ends_at' => env('GALLERY_ENDS_AT'),
-    'event_ends_at' => env('EVENT_ENDS_AT'),
+    'bestof_displayed' => env('BESTOF_DISPLAYED', false),
+    'gallery_displayed' => env('GALLERY_DISPLAYED', false),
 
     'translates' => [
         'spreadsheets' => [

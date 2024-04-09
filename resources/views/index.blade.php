@@ -4,27 +4,41 @@
 
     <x-navbar theme="black"/>
 
-    <x-hero-section/>
+    @if(steps('gallery') || steps('bestof'))
+        <x-hero-section/>
+    @endif
 
-    <div class="relative">
-        <div class="absolute top-3 lg:top-12 inset-x-0 z-10 pointer-events-none">
-            <div class="max-w-7xl mx-auto">
-                <div class="pl-3 lg:pl-0"><img class="max-w-[75px] lg:max-w-[150px]" src="{{ asset('assets/logo.png') }}" alt="TV Animation One Piece 25th"></div>
+    @if(steps('before_countdown'))
+        <x-hero-section/>
+        <x-countdown-section/>
+        <x-trailer-section/>
+    @endif
+
+    @if(steps('after_countdown') && !steps('gallery'))
+        <div class="relative">
+            <div class="absolute top-3 lg:top-12 inset-x-0 z-10 pointer-events-none">
+                <div class="max-w-7xl mx-auto">
+                    <div class="pl-3 lg:pl-0"><img class="max-w-[75px] lg:max-w-[150px]" src="{{ asset('assets/logo.png') }}" alt="TV Animation One Piece 25th"></div>
+                </div>
             </div>
+            <x-stream-section/>
         </div>
-        <x-stream-section/>
-    </div>
+        <x-posts-section/>
+    @endif
 
-    <x-gallery-section/>
-    <x-bestof-section/>
-    <x-countdown-section/>
-    <x-trailer-section/>
-    <x-posts-section/>
+    @if(steps('bestof'))
+        <x-bestof-section/>
+    @endif
+
+    @if(steps('gallery'))
+        <x-gallery-section/>
+    @endif
+
     <x-explain-section/>
     <x-partner-section/>
     <x-footer/>
 
-    {{--@if(steps('event'))--}}
+    @if(steps('after_countdown') && !steps('gallery'))
         <x-modal>
             <livewire:create-post/>
         </x-modal>
@@ -36,6 +50,6 @@
                 </svg>
             </button>
         </div>
-    {{--@endif--}}
+    @endif
 
 @endsection
