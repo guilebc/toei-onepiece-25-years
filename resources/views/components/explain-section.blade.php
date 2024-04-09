@@ -10,7 +10,7 @@
                     <p class="font-bold mb-6">{{ trans('app.luffyCelebrationText1') }}</p>
                     <p class="mb-6">{{ trans('app.luffyCelebrationText2') }}</p>
                     <div class="text-center lg:text-left">
-                        <a href="#" class="btn-primary px-8 py-3 transition-colors hover:bg-black hover:text-white">{{ trans('app.officialWebsite') }}</a>
+                        <a href="https://www.toei-animation.com/" target="_blank" class="btn-primary px-8 py-3 transition-colors hover:bg-black hover:text-white">{{ trans('app.officialWebsite') }}</a>
                     </div>
                 </div>
             </div>
