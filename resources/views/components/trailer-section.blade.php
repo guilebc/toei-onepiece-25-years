@@ -2,7 +2,6 @@
     <div class="max-w-7xl mx-auto py-12 lg:py-24">
         <div class="text-white text-center px-3 mb-12">
             <h1 class="font-display text-5xl uppercase">{{ trans('app.watchEpicTrailer') }}</h1>
-            <p class="font-display text-2xl uppercase">{{ trans('app.firstGift') }}</p>
         </div>
 
         <div class="px-3" x-data="player">
