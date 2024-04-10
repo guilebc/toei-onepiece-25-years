@@ -12,8 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('app:instagram-content')->everyFiveMinutes();
-        $schedule->command('app:translate-import')->everyTenMinutes();
+        $schedule->command('app:instagram-content')->everyFiveMinutes()->evenInMaintenanceMode();
+        $schedule->command('app:translate-import')->everyTenMinutes()->evenInMaintenanceMode();
     }
 
     /**
