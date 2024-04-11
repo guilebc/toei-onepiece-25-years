@@ -10,7 +10,6 @@
     @if(steps('before_countdown'))
         <x-hero-section/>
         <x-countdown-section/>
-        <x-trailer-section/>
     @endif
 
     @if(steps('after_countdown') && !steps('gallery'))
