@@ -21,34 +21,5 @@
 </IfModule>
 <IfModule mod_expires.c>
     ExpiresActive on
-    # Définir le cache par défaut sur "accès plus 1 mois"
     ExpiresDefault "access plus 1 month"
-
-    # Images
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year" # Pour les fichiers ICO
-
-    # Vidéos
-    ExpiresByType video/mp4 "access plus 1 year"
-
-    # Polices de caractères
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType application/font-woff "access plus 1 year"
-    ExpiresByType application/font-woff2 "access plus 1 year"
-    ExpiresByType font/opentype "access plus 1 year"
-    ExpiresByType font/ttf "access plus 1 year"
-    ExpiresByType application/x-font-ttf "access plus 1 year"
-    ExpiresByType application/x-font-otf "access plus 1 year"
-
-    # CSS
-    ExpiresByType text/css "access plus 1 year"
-
-    # JavaScript
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType text/javascript "access plus 1 year"
 </IfModule>
