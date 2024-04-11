@@ -28,7 +28,7 @@
                     @endforeach
                 </div>
 
-                <div class="text-sm text-center lg:text-left"><a  class="hover:text-primary" href="#">{{ trans('app.legalNotice') }}</a></div>
+                <div class="text-sm text-center lg:text-left"><a class="hover:text-primary" href="{{ asset('assets/legal-terms.pdf') }}" target="_blank">{{ trans('app.legalNotice') }}</a></div>
                 <p class="text-sm text-center lg:text-left">&copy; Eiichiro Oda/Shueisha, Toei Animation</p>
             </div>
         </div>
