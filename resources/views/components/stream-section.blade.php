@@ -18,7 +18,7 @@
                 @foreach($streams as $index => $stream)
                     <div @click="slideTo({{ $index }})" class="cursor-pointer">
                         <div class="stream__city bg-{{ $stream['color'] }}"></div>
-                        <div>{{ $stream['name'] }}</div>
+                        <div class="text-black lg:text-white ">{{ $stream['name'] }}</div>
                     </div>
                 @endforeach
             </div>
