@@ -27,7 +27,7 @@ class StreamSection extends Component
             'name' => 'Milan',
             'color' => 'milan',
             'stream_url' => asset('assets/milan.mp4'),
-            'youtube_id' => 'iH5OWAiSQOQ',
+            'youtube_id' => 'Y_IZhrpaAwQ',
         ], [
             'slug' => 'berlin',
             'name' => 'Berlin',
