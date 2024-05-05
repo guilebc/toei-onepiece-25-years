@@ -19,7 +19,8 @@ class Posts extends Component
     public function render()
     {
         return view('livewire.posts', [
-            'posts' => Post::active()
+            'posts' => Post::distinct()
+                ->active()
                 ->city($this->city)
                 ->latest('published_at')
                 ->paginate($this->perPage)
