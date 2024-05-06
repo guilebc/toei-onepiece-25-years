@@ -5,7 +5,7 @@
 
     <x-hero-section/>
 
-    <x-posts-section/>
+    <x-gallery-section/>
 
     <x-explain-section/>
     <x-partner-section/>
