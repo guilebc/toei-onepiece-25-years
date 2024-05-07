@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto py-12">
         <div class="text-center mb-6">
             <h1 class="font-display text-5xl uppercase">{{ trans('app.thankYouAll') }}</h1>
-            <p class="font-display text-2xl uppercase">{{ trans('app.watchAgain') }}</p>
+            <p class="font-display text-2xl uppercase">{{ trans('app.galleryText') }}</p>
         </div>
 
         <div class="px-3 lg:px-0">

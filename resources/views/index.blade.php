@@ -5,6 +5,7 @@
 
     <x-hero-section/>
 
+    <x-bestof-section/>
     <x-gallery-section/>
 
     <x-explain-section/>
